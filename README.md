@@ -136,7 +136,7 @@ sensor.gyro_cfg.bw = BMI160_GYRO_BW_NORMAL_MODE;
 	  aZ_f32 = imu_t.BMI160_Az_f32; //
 
 	  gX_f32 = imu_t.BMI160_Gx_f32 * 0.001f; // Read scaled gyro values from all 3 axes, unit: (deg/s)
-	  gY_f32 = imu_t.BMI160_Gy_f32 * 0.001f; // 0.001 is 1 ms whic is represents 1000 Hz rate
+	  gY_f32 = imu_t.BMI160_Gy_f32 * 0.001f; // 0.001 is 1 ms which is represents 1000 Hz rate
 	  gZ_f32 = imu_t.BMI160_Gz_f32 * 0.001f; // Multiply readings with calculation period for integration
 
 
