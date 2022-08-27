@@ -125,7 +125,7 @@ sensor.gyro_cfg.bw = BMI160_GYRO_BW_NORMAL_MODE;
 ```
   timer_u64 = micros();
 
-  // Read an process data at 1000 Hz rate
+  // Read and process data at 1000 Hz rate
 
   if ( ((timer_u64 - lastTime_u64) >= 1000) && (imu_t.INIT_OK_i8 != TRUE) ) // && (PIN_LOW == 1))
   {
