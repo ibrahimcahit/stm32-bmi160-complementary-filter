@@ -143,7 +143,7 @@ sensor.gyro_cfg.bw = BMI160_GYRO_BW_NORMAL_MODE;
 	  gyro_pitch_f32 += gX_f32; // integrate gyro readings for pitch and roll calculation
 	  gyro_roll_f32 += gY_f32;
 
-	  gyro_pitch_f32 += gyro_roll_f32 * sin(gZ_f32 * 0.01745329f); // correct X andy Y axis readings with respect to Z axis readings
+	  gyro_pitch_f32 += gyro_roll_f32 * sin(gZ_f32 * 0.01745329f); // correct pitch andy roll readings with respect to Z axis readings
 	  gyro_roll_f32 -= gyro_pitch_f32 * sin(gZ_f32 * 0.01745329f); // sin function accepts radians, 0.01745329 = pi / 180
 
 	  acc_total_vector_f32 = sqrt((aX_f32*aX_f32)+(aY_f32*aY_f32)+(aZ_f32*aZ_f32)); // Calculate total acceleration vector
@@ -151,7 +151,7 @@ sensor.gyro_cfg.bw = BMI160_GYRO_BW_NORMAL_MODE;
 	  accel_pitch_f32 = asin(aY_f32/acc_total_vector_f32) * 57.296f; // Calculate pitch and roll respect to acceleration readings
 	  accel_roll_f32 = asin(aX_f32/acc_total_vector_f32) * -57.296f;
 
-	  accel_pitch_f32 -= 0.0f; // Corrections or acceleration calculations.
+	  accel_pitch_f32 -= 0.0f; // Corrections for acceleration calculations.
 	  accel_roll_f32 -= 0.0f; // Leave 0 if accel values are ~0.0 when resting
 
 	  // initial pitch and roll readings should be aceel-based
