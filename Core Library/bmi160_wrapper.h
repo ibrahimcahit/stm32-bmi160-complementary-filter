@@ -15,7 +15,7 @@
 
 #define 	TRUE 			1
 #define 	FALSE 			0
-#define 	PRINTIF_DEBUG 	0
+#define 	PRINTIF_DEBUG 		0
 
 typedef struct {
 
