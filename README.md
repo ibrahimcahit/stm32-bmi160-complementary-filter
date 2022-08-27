@@ -131,7 +131,7 @@ sensor.gyro_cfg.bw = BMI160_GYRO_BW_NORMAL_MODE;
   {
 	  bmi160ReadAccelGyro(&imu_t);
 
-	  aX_f32 = imu_t.BMI160_Ax_f32; // Read RAW and unscaled acceleration values from all 3 axes, unit: (g)
+	  aX_f32 = imu_t.BMI160_Ax_f32; // Read scaled acceleration values from all 3 axes, unit: (g)
 	  aY_f32 = imu_t.BMI160_Ay_f32; //
 	  aZ_f32 = imu_t.BMI160_Az_f32; //
 
