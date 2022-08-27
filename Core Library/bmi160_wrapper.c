@@ -49,13 +49,12 @@ float bmi160_aRes, bmi160_gRes;
 
 int8_t BMI160_init(BMI160_t *DataStruct)
 {
+    int8_t rslt;
 
-	int8_t rslt;
-
-	set_bmi160_Ares();
-	set_bmi160_Gres();
-	get_bmi160_Ares();
-	get_bmi160_Gres();
+    set_bmi160_Ares();
+    set_bmi160_Gres();
+    get_bmi160_Ares();
+    get_bmi160_Gres();
 
     sensor.id = 0;
     sensor.intf = BMI160_I2C_INTF;
@@ -109,7 +108,7 @@ int8_t BMI160_init(BMI160_t *DataStruct)
 
     rslt = start_foc();
 
-	/********************************************************************/
+    /********************************************************************/
 
     /* Select the Interrupt channel/pin */
     int_config.int_channel = BMI160_INT_CHANNEL_1;// Interrupt channel/pin 1
@@ -267,5 +266,3 @@ void get_bmi160_Gres()
 			break;
 	}
 }
-
-
