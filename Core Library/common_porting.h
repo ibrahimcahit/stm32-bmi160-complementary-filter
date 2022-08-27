@@ -18,9 +18,9 @@
 #include "stm32g4xx_hal.h"
 #include "main.h"
 
-#define I2C_HANDLE	(hi2c1)
-#define BMI160_ADDR 0x69<<1
-#define BUS_TIMEOUT 1000
+#define I2C_HANDLE	  (hi2c1)
+#define BMI160_ADDR   0x69<<1
+#define BUS_TIMEOUT   1000
 
 #define I2CTIMEOUT 100
 
