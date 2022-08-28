@@ -33,7 +33,7 @@ enum BMI160_Gscale {
   GFS_2000DPS
 };
 
-// Set sensor range. This is for harware sensitivity
+// Set sensor range. This is for hardware sensitivity
 uint8_t BMI160_Asens = AFS_2G;
 uint8_t BMI160_Gsens = GFS_1000DPS;
 
